@@ -1,7 +1,7 @@
 import type { LucideIcon } from "lucide-react"
-import { TrainFront, Wind, Cpu, Swords, Waves } from "lucide-react"
+import { TrainFront, Wind, Cpu, Swords, Waves, Crosshair, Sparkles } from "lucide-react"
 
-export type GameId = "hsr" | "genshin" | "zzz" | "hi3" | "wuwa"
+export type GameId = "hsr" | "genshin" | "zzz" | "hi3" | "wuwa" | "arknights" | "endfield"
 
 export type ImportProvider = "mihomo" | "enka-genshin" | "enka-zzz" | "none"
 
@@ -133,6 +133,50 @@ export const GAMES: Record<GameId, GameDef> = {
       { id: "focused", name: "Focused Supply", short: "Focused", softPity: 0, hardPity: 50, limited: true },
     ],
   },
+  arknights: {
+    id: "arknights",
+    name: "Arknights",
+    short: "Arknights",
+    icon: Crosshair,
+    pullNoun: "Headhunt",
+    pullPlural: "Headhunts",
+    pullVerb: "headhunt",
+    currency: "Orundum",
+    currencyPerPull: 600,
+    usdPerPull: 1.5,
+    topRarity: 5,
+    accent: "#f59e0b",
+    importProvider: "none",
+    uidPlaceholder: "manual only",
+    uidLength: 0,
+    blurb: "Track Operator headhunting history and limited banners.",
+    banners: [
+      { id: "standard", name: "Standard Headhunting", short: "Standard", softPity: 50, hardPity: 100, limited: false },
+      { id: "limited", name: "Limited Headhunting", short: "Limited", softPity: 50, hardPity: 100, limited: true },
+    ],
+  },
+  endfield: {
+    id: "endfield",
+    name: "Arknights: Endfield",
+    short: "Endfield",
+    icon: Sparkles,
+    pullNoun: "Headhunt",
+    pullPlural: "Headhunts",
+    pullVerb: "headhunt",
+    currency: "Originium",
+    currencyPerPull: 160,
+    usdPerPull: 1.93,
+    topRarity: 5,
+    accent: "#38bdf8",
+    importProvider: "none",
+    uidPlaceholder: "manual only",
+    uidLength: 0,
+    blurb: "Keep Endfield recruitment history beside every other game.",
+    banners: [
+      { id: "character", name: "Featured Recruitment", short: "Featured", softPity: 70, hardPity: 90, limited: true },
+      { id: "standard", name: "Standard Recruitment", short: "Standard", softPity: 70, hardPity: 90, limited: false },
+    ],
+  },
   wuwa: {
     id: "wuwa",
     name: "Wuthering Waves",
@@ -158,9 +202,9 @@ export const GAMES: Record<GameId, GameDef> = {
   },
 }
 
-export const GAME_LIST: GameDef[] = [GAMES.hsr, GAMES.genshin, GAMES.zzz, GAMES.hi3, GAMES.wuwa]
+export const GAME_LIST: GameDef[] = [GAMES.hsr, GAMES.genshin, GAMES.zzz, GAMES.hi3, GAMES.wuwa, GAMES.arknights, GAMES.endfield]
 
-export const GAME_IDS: GameId[] = ["hsr", "genshin", "zzz", "hi3", "wuwa"]
+export const GAME_IDS: GameId[] = ["hsr", "genshin", "zzz", "hi3", "wuwa", "arknights", "endfield"]
 
 export function isGameId(v: string): v is GameId {
   return (GAME_IDS as string[]).includes(v)

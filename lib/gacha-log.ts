@@ -38,6 +38,8 @@ const GACHA_TYPE_MAP: Record<GameId, Record<string, string>> = {
   },
   hi3: {},
   wuwa: {},
+  arknights: {},
+  endfield: {},
 }
 
 interface GachaLogItem {

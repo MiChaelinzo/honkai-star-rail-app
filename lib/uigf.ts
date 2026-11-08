@@ -21,6 +21,8 @@ const UIGF_KEY: Record<GameId, string> = {
   zzz: "nap",
   hi3: "", // not part of UIGF
   wuwa: "", // not part of UIGF (manual-only)
+  arknights: "", // not part of UIGF (manual-only)
+  endfield: "", // not part of UIGF (manual-only)
 }
 
 // API gacha_type ids -> our internal banner ids (mirror of gacha-log map).
@@ -30,6 +32,8 @@ const GACHA_TYPE_TO_BANNER: Record<GameId, Record<string, string>> = {
   zzz: { "2": "agent", "3": "wengine", "5": "bangboo", "1": "standard" },
   hi3: {},
   wuwa: {},
+  arknights: {},
+  endfield: {},
 }
 
 // Our internal banner id -> a single representative gacha_type for export.
@@ -39,6 +43,8 @@ const BANNER_TO_GACHA_TYPE: Record<GameId, Record<string, string>> = {
   zzz: { agent: "2", wengine: "3", bangboo: "5", standard: "1" },
   hi3: {},
   wuwa: {},
+  arknights: {},
+  endfield: {},
 }
 
 // Per-game item_type label for a pull (best-effort, English).

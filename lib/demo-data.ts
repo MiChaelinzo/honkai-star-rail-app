@@ -34,10 +34,10 @@ const ROSTER: DemoSeed[] = [
 ]
 
 // Slightly vary stats per game so each leaderboard feels distinct.
-const GAME_FACTOR: Record<GameId, number> = { hsr: 1, genshin: 0.92, zzz: 0.78, hi3: 0.55, wuwa: 0.7 }
+const GAME_FACTOR: Record<GameId, number> = { hsr: 1, genshin: 0.92, zzz: 0.78, hi3: 0.55, wuwa: 0.7, arknights: 0.62, endfield: 0.5 }
 
 function uidFor(game: GameId, base: number): string {
-  const prefixes: Record<GameId, string> = { hsr: "80", genshin: "61", zzz: "100", hi3: "20", wuwa: "70" }
+  const prefixes: Record<GameId, string> = { hsr: "80", genshin: "61", zzz: "100", hi3: "20", wuwa: "70", arknights: "ak", endfield: "ef" }
   return `${prefixes[game]}${String(base).padStart(7, "0")}`
 }
 
