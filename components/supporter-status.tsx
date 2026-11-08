@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Button } from "@/components/ui/button"
 import { Paywall } from "@/components/paywall-dialog"
 import { disableSupporter } from "@/app/actions/supporter"
+import { PayPalSupport } from "@/components/paypal-support"
 import type { SupporterStatus as Status } from "@/lib/types"
 import { Heart, Sparkles, Check, Clock, X } from "lucide-react"
 
@@ -95,12 +96,16 @@ export function SupporterStatus({
                 </div>
               </div>
             ) : null}
-            <Paywall status={supporterStatus}>
-              <Button>
-                <Heart className="size-4" />
-                {isRejected ? "Submit a new receipt" : "Become a Supporter"}
-              </Button>
-            </Paywall>
+            <div className="flex flex-wrap gap-2">
+              <Paywall status={supporterStatus}>
+                <Button>
+                  <Heart className="size-4" />
+                  {isRejected ? "Submit a new receipt" : "Become a Supporter"}
+                </Button>
+              </Paywall>
+              <PayPalSupport />
+            </div>
+            <p className="text-xs text-muted-foreground">PayPal checkout is available in sandbox mode for a $5 supporter contribution.</p>
           </>
         )}
       </CardContent>
