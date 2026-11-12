@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Astral Warp Archive — Multi-Game Gacha Tracker',
   description:
-    'Track warps, wishes, signals, supplies, and convenes across Honkai: Star Rail, Genshin Impact, Zenless Zone Zero, Honkai Impact 3rd, and Wuthering Waves. Forecast your next five-star, analyze spending, and climb the global luck leaderboard.',
+    'Track pulls, pity, banner forecasts, and spending across seven games including Honkai: Star Rail, Genshin Impact, Wuthering Waves, Arknights, and Endfield. Plan your next five-star and share your luck.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   colorScheme: 'dark',
-  themeColor: '#0c0e1a',
+  themeColor: '#111022',
 }
 
 export default function RootLayout({
