@@ -211,7 +211,7 @@ export function AppShell({
   return (
     <div className="min-h-screen lg:flex">
       {/* Desktop sidebar */}
-      <aside className="sticky top-0 hidden h-screen w-64 shrink-0 border-r border-border/60 bg-card/40 backdrop-blur lg:block">
+      <aside className="sticky top-0 hidden h-screen w-64 shrink-0 border-r border-sidebar-border bg-sidebar/90 shadow-[12px_0_48px_-36px_oklch(0.72_0.17_285_/_0.45)] backdrop-blur-xl lg:block">
         <SidebarBody />
       </aside>
 
